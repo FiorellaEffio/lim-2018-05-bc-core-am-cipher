@@ -1,10 +1,17 @@
-var answer = parseInt(prompt("¿Que es lo que deseas hacer? \n 1.Cifrar \n 2.Descifrar"));
-var word = prompt("Ingrese el texto:");
-var offset = parseInt(prompt("Ingrese el numero de espacios:"));
-
-if(answer === 1){
-     (cipher.createCipherWithOffset(offset)).code1(word);
+var string, offset;
+document.getElementById('texto').addEventListener("change", cambiartexto);
+document.getElementById('espacios').addEventListener("change", cambiaroffset);
+document.getElementById('boton1').addEventListener("click", ciframe);
+document.getElementById('boton2').addEventListener("click", desciframe);
+function cambiartexto() {
+  string = document.getElementById('texto').value;
 }
-if(answer === 2){
-     (cipher.createCipherWithOffset(offset)).code2(word);
+function cambiaroffset() {
+  offset = parseInt(document.getElementById('espacios').value)%26;
+}
+function ciframe() {
+  (cipher.createCipherWithOffset(offset)).code1(string);
+}
+function desciframe() {
+  (cipher.createCipherWithOffset(offset)).code2(string);
 }
