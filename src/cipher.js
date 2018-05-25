@@ -43,13 +43,13 @@ window.cipher = {
               decipher_word = decipher_word + String.fromCharCode((array[i].charCodeAt(0) - num - offset ) % 26 + num);
           }
         }
-
   }
       document.write(decipher_word);
-
   },
   createCipherWithOffset : (offset) => {
-    encode : (string) => { return cipher.encode(offset, string); }
-    decode : (string) => { return cipher.decode(offset, string); }
-  }
+    return window.cipher1 = {
+      code1 : (string) => { return cipher.encode(offset, string); },
+      code2 : (string) => { return cipher.decode(offset, string); }
+    };
+    }
 };

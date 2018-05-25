@@ -3,8 +3,8 @@ var word = prompt("Ingrese el texto:");
 var offset = parseInt(prompt("Ingrese el numero de espacios:"));
 
 if(answer === 1){
-     (cipher.createCipherWithOffset(offset)).encode(word);
+     (cipher.createCipherWithOffset(offset)).code1(word);
 }
 if(answer === 2){
-     (cipher.createCipherWithOffset(offset)).decode(word);
+     (cipher.createCipherWithOffset(offset)).code2(word);
 }
