@@ -1,7 +1,8 @@
 window.cipher = {
   encode : (offset, string) => {
     var array = string.split("");
-    var cipher_word, num;
+    var cipher_word ="";
+    var num;
     for(var i=0;i<array.length;i++) {
       var num_letra = array[i].charCodeAt(0);
       if(array[i] === " ")
@@ -18,7 +19,8 @@ window.cipher = {
   },
   decode : (offset, string) => {
     var array = string.split("");
-    var condition, decipher_word, num;
+    var condition, num;
+    var decipher_word ="";
     for(var i=0;i<array.length;i++) {
       var num_letra = array[i].charCodeAt(0);
       if(array[i] === " ")
