@@ -33,17 +33,17 @@ describe('cipher', () => {
     });
 
     describe('cipher.createCipherWithOffset(33)', () => {
-//'debería retornar un objeto con dos funciones (encode y decode) con offset fijado'
+      const offset = 33;
       it('debería ser un objeto', () => {
-        assert.equal(typeof cipher.createCipherWithOffset(33), 'object');
+        assert.equal(typeof cipher.createCipherWithOffset(offset), 'object');
       });
 
       it('debería ser una función', () => {
-        assert.equal(typeof cipher.createCipherWithOffset(33).code1, 'function');
+        assert.equal(typeof cipher.createCipherWithOffset(offset).code1, 'function');
       });
 
       it('debería ser una función', () => {
-        assert.equal(typeof cipher.createCipherWithOffset(33).code2, 'function');
+        assert.equal(typeof cipher.createCipherWithOffset(offset).code2, 'function');
       });
     });
 

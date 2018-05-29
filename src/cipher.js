@@ -1,52 +1,38 @@
 window.cipher = {
   encode : (offset, string) => {
-    var array = string.split("");
-    var cipher_word ="";
-    var num;
-    for(var i=0;i<array.length;i++) {
-      var num_letra = array[i].charCodeAt(0);
-      if(array[i] === " ")
-        {cipher_word = cipher_word + " ";}
-      if(num_letra>=65 && num_letra<=90)
-        {num = 65;
-         cipher_word = cipher_word + String.fromCharCode((num_letra - num + offset) % 26 + num);
-        }
-      if(num_letra>=97 && num_letra<=122)
-        {num = 97;
-      cipher_word = cipher_word + String.fromCharCode((num_letra - num + offset) % 26 + num);}
-    }
-    return cipher_word;
+    //stringArray almacena nuestro string como un array ejemplo string ="hola", stringArray = ['h','o','l','a']
+    let stringArray = string.split("");
+    //inicializamos la variable cipherText para que no nos devuelva undefined
+    let cipherText ="";
+    for(let i = 0; i < stringArray.length; i++) {
+      let arrayLetterAscii = stringArray[i].charCodeAt(0);
+
+      if(arrayLetterAscii >= 65 && arrayLetterAscii <= 90)
+        {cipherText = cipherText + String.fromCharCode((arrayLetterAscii - 65 + offset) % 26 + 65);}
+      else if (arrayLetterAscii >= 97 && arrayLetterAscii <= 122) {
+        cipherText = cipherText + String.fromCharCode((arrayLetterAscii - 97 + offset) % 26 + 97);
+      }
+      else {
+        cipherText = cipherText + stringArray[i];
+      }
+      }
+    return cipherText;
   },
   decode : (offset, string) => {
-    var array = string.split("");
-    var condition, num;
-    var decipher_word ="";
-    for(var i=0;i<array.length;i++) {
-      var num_letra = array[i].charCodeAt(0);
-      if(array[i] === " ")
-        {decipher_word = decipher_word + " ";}
-      if(num_letra>=65 && num_letra<=90)
-        {num = 65;
-          condition = (array[i].charCodeAt(0)-num) - offset;
-          if(condition < 0){
-              decipher_word = decipher_word + String.fromCharCode((array[i].charCodeAt(0) +26 - offset));
-          }
-          else{
-              decipher_word = decipher_word + String.fromCharCode((array[i].charCodeAt(0) - num - offset ) % 26 + num);
-          }
-        }
-      if(num_letra>=97 && num_letra<=122)
-        {num = 97;
-          condition = (array[i].charCodeAt(0)-num) - offset;
-          if(condition < 0){
-              decipher_word = decipher_word + String.fromCharCode((array[i].charCodeAt(0) +26 - offset));
-          }
-          else{
-              decipher_word = decipher_word + String.fromCharCode((array[i].charCodeAt(0) - num - offset ) % 26 + num);
-          }
-        }
-  }
-  return decipher_word;
+    let stringArray = string.split("");
+    let decipherText ="";
+    for(let i = 0; i < stringArray.length; i++) {
+      let arrayLetterAscii = stringArray[i].charCodeAt(0);
+      if(arrayLetterAscii >= 65 && arrayLetterAscii <= 90)
+        {decipherText = decipherText + String.fromCharCode(90 - (90 - arrayLetterAscii + offset) % 26);}
+      else if (arrayLetterAscii >= 97 && arrayLetterAscii <= 122) {
+        decipherText = decipherText + String.fromCharCode(122 - (122 - arrayLetterAscii + offset) % 26);
+      }
+      else {
+        decipherText = decipherText + stringArray[i];
+      }
+      }
+  return decipherText;
   },
   createCipherWithOffset : (offset) => {
     return window.cipher1 = {
