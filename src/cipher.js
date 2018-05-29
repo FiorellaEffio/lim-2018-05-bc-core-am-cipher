@@ -15,7 +15,7 @@ window.cipher = {
         {num = 97;
       cipher_word = cipher_word + String.fromCharCode((num_letra - num + offset) % 26 + num);}
     }
-    document.getElementById('resultado').innerHTML = cipher_word;
+    return cipher_word;
   },
   decode : (offset, string) => {
     var array = string.split("");
@@ -46,7 +46,7 @@ window.cipher = {
           }
         }
   }
-  document.getElementById('resultado').innerHTML = decipher_word;
+  return decipher_word;
   },
   createCipherWithOffset : (offset) => {
     return window.cipher1 = {
