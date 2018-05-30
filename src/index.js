@@ -11,8 +11,8 @@ function cambiaroffset() {
   offset = parseInt(document.getElementById('espacios').value)%26;
 }
 function ciframe() {
-  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).code1(string);
+  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).encode(string);
 }
 function desciframe() {
-  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).code2(string);
+  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).decode(string);
 }

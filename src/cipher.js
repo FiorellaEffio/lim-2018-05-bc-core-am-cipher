@@ -1,5 +1,5 @@
 window.cipher = {
-  encode : (offset, string) => {
+  encode(offset, string) {
     //stringArray almacena nuestro string como un array ejemplo string ="hola", stringArray = ['h','o','l','a']
     let stringArray = string.split("");
     //inicializamos la variable cipherText para que no nos devuelva undefined
@@ -18,7 +18,7 @@ window.cipher = {
       }
     return cipherText;
   },
-  decode : (offset, string) => {
+  decode(offset, string) {
     let stringArray = string.split("");
     let decipherText ="";
     for(let i = 0; i < stringArray.length; i++) {
@@ -34,10 +34,10 @@ window.cipher = {
       }
   return decipherText;
   },
-  createCipherWithOffset : (offset) => {
+  createCipherWithOffset(offset) {
     return window.cipher1 = {
-      code1 : (string) => { return cipher.encode(offset, string); },
-      code2 : (string) => { return cipher.decode(offset, string); }
+      encode(string)  { return cipher.encode(offset, string); },
+      decode(string)  { return cipher.decode(offset, string); }
     };
     }
 };
