@@ -1,18 +1,18 @@
-var string, offset;
-document.getElementById('texto').addEventListener("change", cambiartexto);
-document.getElementById('espacios').addEventListener("change", cambiaroffset);
-document.getElementById('boton1').addEventListener("click", ciframe);
-document.getElementById('boton2').addEventListener("click", desciframe);
+let string, offset;
+document.getElementById('textValue').addEventListener("change", changeText);
+document.getElementById('offsetValue').addEventListener("change", changeOffset);
+document.getElementById('cipher').addEventListener("click", buttonCipher);
+document.getElementById('decipher').addEventListener("click", buttonDecipher);
 
-const cambiartexto = function () {
-  string = document.getElementById('texto').value;
+const changeText = function () {
+  string = document.getElementById('textValue').value;
 }
-const cambiaroffset = function () {
-  offset = parseInt(document.getElementById('espacios').value)%26;
+const changeOffset = function () {
+  offset = parseInt(document.getElementById('offsetValue').value)%26;
 }
-const ciframe = function () {
-  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).encode(string);
+const buttonCipher = function () {
+  document.getElementById('result').innerHTML = (cipher.createCipherWithOffset(offset)).encode(string);
 }
-const desciframe = function () {
-  document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).decode(string);
+const buttonDecipher = function () {
+  document.getElementById('result').innerHTML = (cipher.createCipherWithOffset(offset)).decode(string);
 }

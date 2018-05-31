@@ -2,7 +2,7 @@
   border-radius: 20px;
 }
 
-#texto, #espacios {
+#textValue, #offsetValue {
   border-radius: 7px;
   width: 200px;
   height: 25px;
@@ -20,7 +20,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.contenedor {
+.content {
   background-color: white;
   opacity: 0.5;
   padding-top: 100px;
