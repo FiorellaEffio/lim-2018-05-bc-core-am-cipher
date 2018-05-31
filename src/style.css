@@ -11,7 +11,7 @@
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 10%;
   font-family: 'Courgette', cursive;
   color : #562157;
   text-align: center;
@@ -23,8 +23,9 @@ body {
 .content {
   background-color: white;
   opacity: 0.5;
-  padding-top: 100px;
-  height: 150px;
+  margin-top: 5%;
+  padding-top: 15%;
+  height: 40%;
   color: black;
   font-size: 30px;
 
