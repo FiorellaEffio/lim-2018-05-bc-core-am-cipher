@@ -3,20 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar cipher</title>
+    <!--Añade la hoja de estilos de mocha desde el CDN de cdnjs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.1.0/mocha.min.css" />
   </head>
   <body>
+    <!--Añade un div con id=mocha para que mocha escriba los resultados-->
     <div id="mocha"></div>
+    <!--Añade mocha y chai desde CDN de cdnjs-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.1.0/mocha.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.min.js"></script>
+    <!--Incluimos el codigo que queremos testear-->
     <script src="../src/cipher.js"></script>
+    <!--Guardamos una referencia a chai.assert en la constante assert en entorno global
+        para usar assert en vez de chai.assert-->
     <script>
       const { assert } = chai;
+      //Inicializa la interfaz BDD de mocha
       mocha.setup('bdd');
     </script>
+    <!--Incluimos todos los tests que queramos correr-->
     <script src="./cipher.spec.js"></script>
     <script>
       mocha.checkLeaks();
+      //ejecutamos los tests
       mocha.run();
     </script>
   </body>

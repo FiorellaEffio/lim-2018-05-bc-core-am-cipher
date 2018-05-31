@@ -4,15 +4,15 @@ document.getElementById('espacios').addEventListener("change", cambiaroffset);
 document.getElementById('boton1').addEventListener("click", ciframe);
 document.getElementById('boton2').addEventListener("click", desciframe);
 
-function cambiartexto() {
+const cambiartexto = function () {
   string = document.getElementById('texto').value;
 }
-function cambiaroffset() {
+const cambiaroffset = function () {
   offset = parseInt(document.getElementById('espacios').value)%26;
 }
-function ciframe() {
+const ciframe = function () {
   document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).encode(string);
 }
-function desciframe() {
+const desciframe = function () {
   document.getElementById('resultado').innerHTML = (cipher.createCipherWithOffset(offset)).decode(string);
 }
