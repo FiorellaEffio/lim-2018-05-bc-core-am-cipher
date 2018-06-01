@@ -23,8 +23,8 @@ body {
 .content {
   background-color: white;
   opacity: 0.5;
-  margin-top: 5%;
-  padding-top: 5%;
+  margin-top: 20px;
+  padding-top: 100px;
   height: 40%;
   color: black;
   font-size: 30px;
