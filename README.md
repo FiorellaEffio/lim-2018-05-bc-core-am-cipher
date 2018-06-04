@@ -1,4 +1,4 @@
-# Cifrado César
+# Cifrado César - Mensaje secreto
 
 ## Objetivos
 
@@ -10,27 +10,13 @@ Gracias a este producto los usuarios obtendran una manera sencilla de cifrar y d
 
 ### Definición del producto
 
-
+Interfaz sencilla que nos pide un texto y una clave para comenzar a descifrar o cifrar.
 
 ### Como utilizarlo
 
-  así como una introducción a la aplicación, su funcionalidad y decisiones de
-  diseño que tomaron.
+* Cifrado/Descifrado
+Ingresar cualquier cadena de texto con una clave fija, presionar cifrar/descifrar y a continuacion obtenemos el texto cifrado.
 
+Tenemos tambien dos botones extra uno para limpiar los datos sin necesidad de recargar la pagina y otro para copiar nuestro texto cifrado y mandarlo por whatsapp web.
 
-
-Para el diseño de la experiencia de usuario, puedes aplicar algunas
-de las técnicas y herramientas relacionadas al proceso de diseño como
-entrevistas y testeos con usuarios o sketching y prototipado.
-
-***
-
-## Tips / Pistas
-
-
-* organización de tu proyecto
-
-* Prepara tu presentación, si no logro comunicar mis ideas a los demás no se
-  podrá apreciar todo el esfuerzo y trabajo que invertiste.
-
-## Ṕroceso de implementación
+En la parte final, damos recomendaciones de uso del producto.
