@@ -14,6 +14,7 @@ const buttonDecipher = function () {
 const resetValues = function () {
   document.getElementById('textValue').value = '';
   document.getElementById('offsetValue').value = '';
+  document.getElementById('result').value = '';
 }
 const copyResult = function () {
   /* Get the text field */

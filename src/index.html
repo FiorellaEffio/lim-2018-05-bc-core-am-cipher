@@ -3,23 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name = "viewport" content = "width = device-width, user-scalable = no, initial-scale = 1.0">
-    <title>Caesar Cipher</title>
+    <title>Mensaje secreto</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>Ingresa el texto:</p>
-    <input type="text" id="textValue">
-    <p>Ingresa el numero de espacios:</p>
-    <input type="text" id="offsetValue"><br><br>
-    <button type="button" class="button" id="buttonCipher">Cifrar</button>
-    <button type="button" class="button" id="buttonDecipher">Descifrar</button>
-    <p>Resultado:</p>
-    <div class="content">
-      <!--<span id="result">Aqui va tu resultado</span>-->
-      <input type="text" value="Aqui va tu resultado" id="result">
+    <h1>Bienvenido a Mensaje secreto 🙊</h1>
+    <h4>Mensajes cifrados al instante!</h4>
+    <div class="finalResult">
+      ⌨:
+      <input type="text" id="textValue">
+      🔑:
+      <input type="text" id="offsetValue"><br><br>
+      <button type="button" class="button" id="buttonCipher">Cifrar 🔒</button>&nbsp
+      <button type="button" class="button" id="buttonDecipher">Descifrar 🔓</button><br><br>
+      <div class="contentResult content">
+        Resultado:
+        <!--<span id="result">Aqui va tu resultado</span>-->
+        <input type="text" value="Aqui va tu resultado" id="result">
+      </div>
+      <button type="button" class="button" id="buttonReset">Limpiar ⭮</button>
+      <button type="button" class="button" id="buttonCopy">Copiar 🙌</button>
     </div>
-    <button type="button" class="button" id="buttonReset">Limpiar</button>
-    <button type="button" class="button" id="buttonCopy">Copiar</button>
+    <div class="content">
+      <h3>📝 Instrucciones</h3>
+      <p>☑ Puedes utilizar esta plataforma para cifrar y descifrar mensajes.</p>
+      <p>☑ Recuerda que debes compartir tu clave secreta para que tus amigos sepan cual es tu mensaje secreto.</p>
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
